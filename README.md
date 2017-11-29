@@ -63,6 +63,7 @@ ok: [localhost] => {
 | src       | yes      |         |         | Specify the CSV file path. The path can be absolute or relative. (Detection of files under roles/foo/files is not supported.) |
 | delimiter | no       | '       |         | Single-character field separator.                                                                                         |
 | quotechar | no       | "       |         | Single-character quote character.                                                                                       |
+| outname   | no       |         |         | output name of the json buffer |
 
 ## Examples
 
@@ -73,7 +74,7 @@ Use ``include_vars`` as follows:
 ```
 
 ```yaml
-- include_csv: src=bar.csv delimiter="|" quotechar="'"
+- include_csv: src=bar.csv delimiter="|" quotechar="'" outname="my_bar"
 ```
 
 ### Load locally
